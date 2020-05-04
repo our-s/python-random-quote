@@ -1,14 +1,21 @@
-import random
+import random, sys
 
 def primary():
   f = open("quotes.txt")
   quotes = f.readlines()
   f.close()
 
-  # last = 13
   last = len(quotes) - 1  # last variable to update automatically
   rnd = random.randint(0, last)
-  print(quotes[rnd])
-
+  rndm = random.randint(0, last)
+  
+  # print()
+  # print(quotes[rnd], end=''),
+  # print(quotes[rndm], end='')
+  print()
+  sys.stdout.write(quotes[rnd])
+  sys.stdout.write(quotes[rndm]) 
+  print()
+ 
 if __name__== "__main__":
   primary()
